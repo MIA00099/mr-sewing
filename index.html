@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YPDD9BZHN"></script>
+    <!-- Google Analytics: delayed so it does not slow first paint -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3YPDD9BZHN');
+      window.addEventListener('load', function () {
+        const loadAnalytics = function () {
+          const s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3YPDD9BZHN';
+          document.head.appendChild(s);
+          gtag('js', new Date());
+          gtag('config', 'G-3YPDD9BZHN');
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 2500 });
+        else setTimeout(loadAnalytics, 1200);
+      }, { once: true });
     </script>
 
     <meta charset="UTF-8">
@@ -26,17 +35,53 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mrsewingfashion.com">
     
+
+    <link rel="canonical" href="https://mrsewingfashion.com/">
+    <meta name="theme-color" content="#111111">
+    <meta name="format-detection" content="telephone=yes">
+    <meta property="og:image" content="mr_sewing_logo.png">
+    <meta property="og:site_name" content="Mr Sewing Fashion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mr Sewing Fashion | Custom Tailoring & Bespoke Suits Kigali">
+    <meta name="twitter:description" content="Custom suits, bespoke tailoring, delivery and shipping in Downtown Kigali, Rwanda.">
+    <meta name="twitter:image" content="mr_sewing_logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mr Sewing Fashion",
+      "image": "mr_sewing_logo.png",
+      "url": "https://mrsewingfashion.com/",
+      "telephone": "+250787411501",
+      "email": "mrsewingfashiondesigner@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Downtown",
+        "addressLocality": "Kigali",
+        "addressCountry": "RW"
+      },
+      "sameAs": ["https://instagram.com/mr_sewing_fashion"],
+      "description": "Tailor and custom suits designer in Kigali, Rwanda specializing in bespoke custom clothing, delivery and shipping."
+    }
+    </script>
+
     <!-- Performance: DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+
+    <link rel="preload" as="image" href="mr_sewing_logo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="1.png" fetchpriority="high">
+    <link rel="preload" as="video" href="videomp_.mp4" type="video/mp4">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Google Fonts for Editorial Fashion Look -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -114,6 +159,27 @@
         video {
             background-color: #EAEAE6;
         }
+
+        /* X10 Performance + Mobile Fit Patch */
+        img, video { max-width: 100%; height: auto; }
+        video.absolute, .fashion-img { height: 100%; }
+        .reveal-up, .reveal-left, .reveal-right, .fashion-img, #topo-bg, #rack-parallax { will-change: auto !important; }
+        @media (max-width: 640px) {
+            html, body { width: 100%; overflow-x: hidden; }
+            header nav { padding-left: 1rem !important; padding-right: 1rem !important; }
+            .text-xl.md\:text-2xl { font-size: 1rem !important; letter-spacing: .12em !important; }
+            main section[aria-label="Hero"] { min-height: auto !important; padding-top: 68px !important; }
+            main section[aria-label="Hero"] h1 { font-size: clamp(2.45rem, 12vw, 3.65rem) !important; line-height: .95 !important; }
+            main section[aria-label="Hero"] p { font-size: .95rem !important; line-height: 1.65 !important; }
+            .grid { max-width: 100%; }
+            .fashion-card { width: 82vw !important; max-width: 340px !important; }
+            #rack-parallax { transform: none !important; }
+            #topo-bg { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+        }
+
     </style>
 </head>
 <body class="bg-background text-charcoal font-sans selection:bg-charcoal selection:text-white relative min-h-screen overflow-x-hidden">
@@ -143,7 +209,7 @@
             <!-- Brand Logo & Title -->
             <div class="flex items-center gap-3 md:gap-4">
                 <!-- Eager loaded logo for fast LCP -->
-                <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" fetchpriority="high" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
+                <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" width="80" height="80" loading="eager" decoding="async" fetchpriority="high" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
                 <div class="text-xl md:text-2xl font-serif tracking-widest uppercase text-charcoal font-semibold mt-1">MR SEWING</div>
             </div>
             
@@ -155,7 +221,7 @@
                 <a href="#pitch" class="hover:text-charcoal transition-colors p-2 -m-2">Proposal</a>
                 <!-- Instagram Link -->
                 <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="hover:text-charcoal transition-colors flex items-center gap-1.5 ml-2 border border-stone/50 px-3 py-1.5 rounded-full bg-white/30 backdrop-blur-sm">
-                    <img src="IN.png" alt="Instagram" class="w-3.5 h-3.5 object-contain" loading="lazy" decoding="async"> IG
+                    <img src="IN.png" alt="Instagram" class="w-3.5 h-3.5 object-contain" loading="lazy" decoding="async" fetchpriority="low"> IG
                 </a>
             </div>
 
@@ -178,7 +244,7 @@
                 <a href="#craft" class="mobile-link py-2">Positioning</a>
                 <a href="#pitch" class="mobile-link py-2">Proposal</a>
                 <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="mobile-link py-2 flex items-center gap-2 text-accent">
-                    <img src="IN.png" alt="Instagram" class="w-4 h-4 object-contain" loading="lazy" decoding="async"> @mr_sewing_fashion
+                    <img src="IN.png" alt="Instagram" class="w-4 h-4 object-contain" loading="lazy" decoding="async" fetchpriority="low"> @mr_sewing_fashion
                 </a>
                 <a href="tel:+250787411501" class="text-accent pt-4 pb-2 border-t border-stone">Book via WhatsApp</a>
             </div>
@@ -218,7 +284,7 @@
 
             <!-- Video Hook: This video loads instantly via src, but JS pauses it when out of view -->
             <div class="relative h-[55vh] md:h-[60vh] lg:h-full order-1 lg:order-2 border-b lg:border-b-0 lg:border-l border-stone bg-stone overflow-hidden">
-                 <video loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover object-center scale-[1.02]">
+                 <video loop muted playsinline webkit-playsinline preload="metadata" poster="mr_sewing_logo.png" class="absolute inset-0 w-full h-full object-cover object-center scale-[1.02]">
                     <source src="videomp_.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                  </video>
@@ -304,7 +370,7 @@
                 <!-- Images have standard native lazy load -->
                 <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer" style="transition-delay: 250ms;">
                     <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
-                        <img src="18.png" alt="White Gold-Button Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                        <img src="18.png" alt="White Gold-Button Suit" loading="eager" decoding="async" fetchpriority="high" class="w-full h-full object-cover object-top fashion-img" />
                     </div>
                     <div class="mt-4 md:mt-6 flex justify-between items-start">
                         <div>
@@ -317,7 +383,7 @@
 
                 <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer lg:mt-24" style="transition-delay: 350ms;">
                     <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
-                        <img src="4.png" alt="Rust Minimalist Tunic" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="4.png" alt="Rust Minimalist Tunic" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="mt-4 md:mt-6 flex justify-between items-start">
                         <div>
@@ -330,7 +396,7 @@
 
                 <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer" style="transition-delay: 450ms;">
                     <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
-                        <img src="7.png" alt="Duo Pinstripe Coordination" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                        <img src="7.png" alt="Duo Pinstripe Coordination" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-top fashion-img" />
                     </div>
                     <div class="mt-4 md:mt-6 flex justify-between items-start">
                         <div>
@@ -355,7 +421,7 @@
                 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="1.png" alt="White Jacquard Tuxedo" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="1.png" loading="eager" fetchpriority="high" alt="White Jacquard Tuxedo" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -368,7 +434,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="2.png" alt="Black Jacquard Tuxedo" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="2.png" loading="eager" fetchpriority="high" alt="Black Jacquard Tuxedo" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -381,7 +447,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="10.png" alt="Lavender Double Breasted Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="10.png" loading="eager" fetchpriority="high" alt="Lavender Double Breasted Suit" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -394,7 +460,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-4rem]">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="5.png" alt="Blue Utility Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="5.png" alt="Blue Utility Suit" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -407,7 +473,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="6.png" alt="Crimson Pinstripe Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="6.png" alt="Crimson Pinstripe Suit" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -420,7 +486,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-2rem]">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="17.png" alt="Red & Black Contrast Couple Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="17.png" alt="Red & Black Contrast Couple Styling" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -433,7 +499,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-8">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="16.png" alt="Red Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="16.png" alt="Red Geometric Bomber Jacket" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -446,7 +512,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="8.png" alt="Monochrome Black Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="8.png" alt="Monochrome Black Suit" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -459,7 +525,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="11.png" alt="Youth Black Tunic Formal Wear" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="11.png" alt="Youth Black Tunic Formal Wear" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -472,7 +538,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-2rem]">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="14.png" alt="Tan Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="14.png" alt="Tan Geometric Bomber Jacket" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -485,7 +551,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-8">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="15.png" alt="Olive Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="15.png" alt="Olive Geometric Bomber Jacket" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -498,7 +564,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="12.png" alt="Youth Duo Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="12.png" alt="Youth Duo Styling" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -511,7 +577,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="3.png" alt="Black Tuxedo Bespoke" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                        <img src="3.png" alt="Black Tuxedo Bespoke" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-top fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -524,7 +590,7 @@
 
                 <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-1rem]">
                     <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
-                        <img src="13.png" alt="Tailoring Process Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                        <img src="13.png" alt="Tailoring Process Styling" loading="lazy" decoding="async" fetchpriority="low" class="w-full h-full object-cover object-center fashion-img" />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -640,7 +706,7 @@
         <div class="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16 border-b border-stone pb-12 md:pb-16">
             <div class="w-full md:w-auto flex flex-col items-center md:items-start">
                 <div class="flex items-center gap-3 mb-3 md:mb-4">
-                    <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
+                    <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" width="80" height="80" loading="lazy" decoding="async" fetchpriority="low" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
                     <h1 class="text-3xl md:text-4xl font-serif tracking-tight uppercase text-charcoal">MR SEWING</h1>
                 </div>
                 <p class="text-accent text-xs md:text-sm font-light tracking-widest uppercase">Custom Tailoring & Design</p>
@@ -658,7 +724,7 @@
                 <div>
                     <span class="block text-accent text-[9px] md:text-[10px] uppercase tracking-widest mb-3 md:mb-4">Socials</span>
                     <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="font-serif text-base md:text-lg hover:text-accent transition-colors flex items-center justify-center sm:justify-start gap-2 p-2 -m-2">
-                        <img src="IN.png" alt="Instagram" loading="lazy" decoding="async" class="w-5 h-5 object-contain"> @mr_sewing_fashion
+                        <img src="IN.png" alt="Instagram" loading="lazy" decoding="async" fetchpriority="low" class="w-5 h-5 object-contain"> @mr_sewing_fashion
                     </a>
                 </div>
                 <div class="sm:col-span-2 md:col-span-1">
@@ -702,6 +768,22 @@
                 });
             }
 
+
+            // Smart image warm-up: tells browser to decode lazy images before the user reaches them
+            const lazyImgs = document.querySelectorAll('img[loading="lazy"]');
+            if ('IntersectionObserver' in window) {
+                const imgWarmObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.decode) img.decode().catch(() => {});
+                            obs.unobserve(img);
+                        }
+                    });
+                }, { rootMargin: '900px 0px' });
+                lazyImgs.forEach(img => imgWarmObserver.observe(img));
+            }
+
             // -----------------------------------------------------
             // NEW OPTIMIZATION: Advanced Video Lazy Loader & Manager
             // -----------------------------------------------------
@@ -728,7 +810,7 @@
                         video.pause();
                     }
                 });
-            }, { rootMargin: '400px 0px' }); // Trigger slightly before it scrolls into view
+            }, { rootMargin: '900px 0px' }); // Trigger slightly before it scrolls into view
 
             document.querySelectorAll('video').forEach(video => {
                 videoObserver.observe(video);
