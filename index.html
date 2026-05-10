@@ -106,9 +106,6 @@
     <style>
         /* Extreme Performance Rendering Rules */
         body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-        
-        /* 10x Render Speed on Long Pages */
-        .content-vis-auto { content-visibility: auto; contain-intrinsic-size: 1000px; }
 
         /* Custom Scrollbar for Lookbook */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -126,13 +123,6 @@
             will-change: opacity, transform;
         }
         .is-visible { opacity: 1; transform: translate(0) !important; }
-
-        /* Fast Image Fade-in for Lazy Load */
-        .img-lazy-fade {
-            opacity: 0; transition: opacity 0.5s ease-in-out;
-            background-color: #EAEAE6; /* Placeholder color while loading */
-        }
-        .img-lazy-loaded { opacity: 1; }
 
         /* Mobile Hover Touch Fixes */
         .fashion-img {
@@ -257,7 +247,7 @@
         </section>
 
         <!-- SERVICES SECTION -->
-        <section class="content-vis-auto w-full py-16 md:py-32 border-b border-stone mobile-safe-padding md:px-12 lg:px-16 max-w-[1800px]" id="services" aria-label="Our Services">
+        <section class="w-full py-16 md:py-32 border-b border-stone mobile-safe-padding md:px-12 lg:px-16 max-w-[1800px]" id="services" aria-label="Our Services">
             <div class="reveal-up mb-12 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                 <h2 class="text-[clamp(2rem,6vw,4rem)] font-serif tracking-tight text-charcoal leading-[1.1]">Custom Tailoring <br/><span class="italic text-accent">& Bespoke Suits</span></h2>
                 <p class="text-accent w-full max-w-sm text-xs md:text-sm leading-relaxed font-light">A premium digital storefront for a Kigali tailor moving from social media messages to a structured custom-suit booking experience.</p>
@@ -286,7 +276,7 @@
         </section>
 
         <!-- EDITORIAL LOOKBOOK CAROUSEL (Horizontal Scroll) -->
-        <section id="rack-parallax" class="content-vis-auto w-full py-16 md:py-24 border-b border-stone will-change-transform max-w-full overflow-hidden" aria-label="Suit Lookbook">
+        <section id="rack-parallax" class="w-full py-16 md:py-24 border-b border-stone will-change-transform max-w-full overflow-hidden" aria-label="Suit Lookbook">
             <div class="flex items-center justify-between mb-8 px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto w-full">
                 <h3 class="text-lg md:text-xl font-serif italic text-charcoal">Suit Lookbook</h3>
                 <span class="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-accent flex items-center gap-2">Swipe <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
@@ -328,7 +318,7 @@
                 <!-- High Priority Carousel Image -->
                 <article class="reveal-up relative fashion-card shrink-0 w-[85vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer">
                     <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm relative">
-                        <img src="18.png" width="400" height="533" alt="White Gold-Button Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img absolute inset-0 img-lazy-fade" />
+                        <img src="18.png" width="400" height="533" alt="White Gold-Button Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img absolute inset-0" />
                     </div>
                     <div class="mt-4 flex justify-between items-start">
                         <div>
@@ -342,7 +332,100 @@
         </section>
 
         <!-- PORTFOLIO GRID -->
-        <section class="content-vis-auto w-full py-16 md:py-32 border-b border-stone mobile-safe-padding md:px-12 lg:px-16 max-w-[1800px]" id="collection" aria-label="Tailoring Portfolio">
+        <section class="w-full py-16 md:py-32 border-b border-stone mobile-safe-padding md:px-12 lg:px-16 max-w-[1800px]" id="collection" aria-label="Tailoring Portfolio">
+            <div class="reveal-up text-center mb-12 md:mb-24">
+                <p class="text-[10px] tracking-[0.3em] text-accent uppercase mb-4">Tailoring Portfolio</p>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight text-charcoal">The Suit Lookbook</h2>
+            </div>
+
+            <!-- Highly Responsive Grid Setup -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full">
+                
+                <!-- Card Component Pattern -->
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12 w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <!-- Dimensions added to prevent Layout Shift -->
+                        <img src="1.png" width="400" height="500" alt="White Jacquard Tuxedo" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Jacquard Elegance</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Formal Suiting</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 01</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <img src="2.png" width="400" height="500" alt="Black Jacquard Tuxedo" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Classic Noir</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Custom Suits</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 02</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24 w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <img src="10.png" width="400" height="500" alt="Lavender Double Breasted Suit" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Lavender Statement</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Premium Finish</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 03</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-4rem] w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <img src="5.png" width="400" height="500" alt="Blue Utility Suit" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Utility Tailoring</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Tailored Fit</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 04</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12 w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <img src="6.png" width="400" height="500" alt="Crimson Pinstripe Suit" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Crimson Pinstripe</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Custom Outfit</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 05</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-2rem] w-full">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 rounded-sm relative">
+                        <img src="17.png" width="400" height="500" alt="Red & Black Contrast Couple Styling" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Duo Coordination</h4>
+                            <p class="text-[10px] text-accent uppercase tracking-widest mt-1">Pair Styling</p>
+                        </div>
+                        <span class="text-[10px] text-accent font-serif italic">Arc. 06</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PROFILE SECTION -->
+        <section class="w-full py-16 md:py-24 mobile-safe-padding md:px-12 lg:px-16 max-w-[1800px]" id="craft" aria-label="Business Profile">
             <div class="reveal-up text-center mb-12 md:mb-24">
                 <p class="text-[10px] tracking-[0.3em] text-accent uppercase mb-4">Tailoring Portfolio</p>
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight text-charcoal">The Suit Lookbook</h2>
@@ -481,7 +564,7 @@
         </section>
 
         <!-- THE PITCH SECTION -->
-        <section class="content-vis-auto bg-charcoal text-white p-8 md:p-16 lg:p-24 relative overflow-hidden my-12 w-[calc(100%-2rem)] md:w-full max-w-[1800px] mx-auto rounded-md md:rounded-sm" id="pitch" aria-label="Digital Proposal">
+        <section class="bg-charcoal text-white p-8 md:p-16 lg:p-24 relative overflow-hidden my-12 w-[calc(100%-2rem)] md:w-full max-w-[1800px] mx-auto rounded-md md:rounded-sm" id="pitch" aria-label="Digital Proposal">
             <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24">
                 <div class="lg:col-span-5 reveal-right">
                     <p class="text-stone/60 uppercase tracking-[0.2em] text-[10px] mb-4 border-b border-white/20 pb-3 inline-block">Digital Identity</p>
@@ -511,7 +594,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="content-vis-auto border-t border-stone bg-background relative z-10 pt-16 pb-10 w-full mobile-safe-padding md:px-12 lg:px-16" aria-label="Site Footer">
+    <footer class="border-t border-stone bg-background relative z-10 pt-16 pb-10 w-full mobile-safe-padding md:px-12 lg:px-16" aria-label="Site Footer">
         <div class="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 border-b border-stone pb-12 w-full">
             <div class="w-full md:w-auto flex flex-col items-start">
                 <div class="flex items-center gap-3 mb-3">
@@ -562,17 +645,6 @@
                     });
                 });
             }
-
-            // SMART IMAGE LAZY LOADER & FADE-IN
-            // Adds smooth fade-in after lazy images load to prevent choppy UI
-            const lazyImages = document.querySelectorAll('img.img-lazy-fade');
-            lazyImages.forEach(img => {
-                if (img.complete) {
-                    img.classList.add('img-lazy-loaded');
-                } else {
-                    img.addEventListener('load', () => img.classList.add('img-lazy-loaded'));
-                }
-            });
 
             // HARDWARE ACCELERATED INTERSECTION OBSERVER (For scroll animations)
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-right');
