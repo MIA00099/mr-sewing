@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YPDD9BZHN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3YPDD9BZHN');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Comprehensive SEO Meta Tags -->
+    <title>Mr Sewing Fashion | Custom Tailoring & Bespoke Suits Kigali</title>
+    <meta name="description" content="Mr Sewing Fashion is a Kigali-based tailor and custom suits designer specializing in bespoke custom clothing, fast delivery, shipping, and premium suits made to your vision.">
+    <meta name="keywords" content="Mr Sewing Fashion, Kigali tailor, custom suits Kigali, bespoke suits Rwanda, custom tailoring, fashion designer Kigali, delivery shipping tailoring, mens suits Rwanda">
+    <meta name="author" content="MR SEWING FASHION">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="MR SEWING FASHION | Custom Tailor">
+    <meta property="og:description" content="Custom tailoring, bespoke custom suits, delivery and shipping based in downtown Kigali, Rwanda.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mrsewingfashion.com">
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts for Editorial Fashion Look -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        background: '#F9F9F8',
+                        charcoal: '#111111',
+                        stone: '#EAEAE6',
+                        accent: '#4A4A4A'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Performance: Optimize rendering */
+        body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+        
+        /* Custom Scrollbar for Lookbook */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Hardware Accelerated Smooth Reveals */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(3rem);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(2rem);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(-2rem);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translate(0) !important;
+        }
+
+        /* Image hover interaction */
+        .fashion-img {
+            filter: grayscale(100%);
+            transition: filter 0.6s ease, transform 1s ease;
+            will-change: filter, transform;
+        }
+        
+        /* Touch device specific fix for hover */
+        @media (hover: hover) {
+            .fashion-card:hover .fashion-img {
+                filter: grayscale(0%);
+                transform: scale(1.03);
+            }
+        }
+        @media (hover: none) {
+            .fashion-img { filter: grayscale(0%); } /* Full color on mobile to avoid tap issues */
+        }
+        
+        /* Ensures empty videos still hold layout space */
+        video {
+            background-color: #EAEAE6;
+        }
+    </style>
+</head>
+<body class="bg-background text-charcoal font-sans selection:bg-charcoal selection:text-white relative min-h-screen overflow-x-hidden">
+
+    <!-- Subtle Topography Background -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none fixed" aria-hidden="true">
+        <div id="topo-bg" class="absolute inset-0 opacity-[0.06] mix-blend-multiply will-change-transform">
+            <svg class="w-full h-[200vh] min-w-[1200px]" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-100 200 C 300 100, 600 500, 1500 200" stroke="#111" stroke-width="0.5" />
+                <path d="M-100 300 C 300 200, 600 600, 1500 300" stroke="#111" stroke-width="0.5" />
+                <path d="M-100 400 C 300 300, 600 700, 1500 400" stroke="#111" stroke-width="0.5" />
+                <path d="M-100 100 C 200 -50, 800 200, 1500 50" stroke="#111" stroke-width="0.5" />
+                <path d="M-100 500 C 400 400, 700 800, 1500 500" stroke="#111" stroke-width="0.5" />
+                <path d="M-100 600 C 500 500, 800 900, 1500 600" stroke="#111" stroke-width="0.5" />
+                <ellipse cx="200" cy="300" rx="200" ry="160" stroke="#111" stroke-width="0.5" />
+                <ellipse cx="200" cy="300" rx="250" ry="200" stroke="#111" stroke-width="0.5" />
+                <ellipse cx="1200" cy="600" rx="400" ry="320" stroke="#111" stroke-width="0.5" />
+                <ellipse cx="1200" cy="600" rx="500" ry="390" stroke="#111" stroke-width="0.5" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Semantic Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-background/85 border-b border-stone">
+        <nav class="flex items-center justify-between px-6 py-5 md:px-12 lg:px-16" aria-label="Main Navigation">
+            
+            <!-- Brand Logo & Title -->
+            <div class="flex items-center gap-3 md:gap-4">
+                <!-- Eager loaded logo for fast LCP -->
+                <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" fetchpriority="high" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
+                <div class="text-xl md:text-2xl font-serif tracking-widest uppercase text-charcoal font-semibold mt-1">MR SEWING</div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 lg:space-x-12 text-[10px] lg:text-[11px] uppercase tracking-[0.2em] text-accent font-medium">
+                <a href="#services" class="hover:text-charcoal transition-colors p-2 -m-2">Services</a>
+                <a href="#collection" class="hover:text-charcoal transition-colors p-2 -m-2">Portfolio</a>
+                <a href="#craft" class="hover:text-charcoal transition-colors p-2 -m-2">Positioning</a>
+                <a href="#pitch" class="hover:text-charcoal transition-colors p-2 -m-2">Proposal</a>
+                <!-- Instagram Link -->
+                <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="hover:text-charcoal transition-colors flex items-center gap-1.5 ml-2 border border-stone/50 px-3 py-1.5 rounded-full bg-white/30 backdrop-blur-sm">
+                    <img src="IN.png" alt="Instagram" class="w-3.5 h-3.5 object-contain" loading="lazy" decoding="async"> IG
+                </a>
+            </div>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="tel:+250787411501" class="hidden sm:flex items-center gap-2 text-[10px] md:text-xs font-medium tracking-widest uppercase border-b border-charcoal pb-1 hover:text-accent hover:border-accent transition-all p-2 -m-2">
+                    Book Suit
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-3 -mr-3" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6 stroke-[1.5]"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-background border-b border-stone px-6 py-4 absolute w-full shadow-2xl transition-all">
+            <div class="flex flex-col space-y-6 text-xs uppercase tracking-[0.2em] text-charcoal font-medium pb-4">
+                <a href="#services" class="mobile-link py-2">Services</a>
+                <a href="#collection" class="mobile-link py-2">Portfolio</a>
+                <a href="#craft" class="mobile-link py-2">Positioning</a>
+                <a href="#pitch" class="mobile-link py-2">Proposal</a>
+                <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="mobile-link py-2 flex items-center gap-2 text-accent">
+                    <img src="IN.png" alt="Instagram" class="w-4 h-4 object-contain" loading="lazy" decoding="async"> @mr_sewing_fashion
+                </a>
+                <a href="tel:+250787411501" class="text-accent pt-4 pb-2 border-t border-stone">Book via WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 w-full">
+        
+        <!-- HIGH-PERFORMANCE VIDEO HERO SECTION -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 min-h-[100vh] lg:min-h-[90vh] pt-[72px] border-b border-stone" aria-label="Hero">
+            <!-- Text Content -->
+            <div class="flex flex-col justify-center px-6 py-16 md:px-12 lg:px-20 order-2 lg:order-1 bg-background/50 backdrop-blur-sm lg:backdrop-blur-none z-10">
+                <div class="reveal-right text-[9px] md:text-[10px] tracking-[0.3em] text-accent uppercase mb-6 md:mb-8" style="transition-delay: 100ms;">
+                    <span class="block mb-2 text-charcoal">—</span>
+                    Custom Suits<br/>
+                    Downtown Kigali, Rwanda
+                </div>
+                
+                <h1 class="reveal-up text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] leading-[1] md:leading-[0.9] font-serif text-charcoal mb-6 md:mb-8 tracking-tight" style="transition-delay: 200ms;">
+                    Tailored to fit <br />
+                    <span class="italic font-light text-accent/90">your vision</span> perfectly.
+                </h1>
+                
+                <p class="reveal-up text-sm md:text-base lg:text-lg text-accent max-w-md leading-relaxed font-light mb-10 md:mb-12" style="transition-delay: 300ms;">
+                    Kigali-based custom tailoring and bespoke suits designed precisely to your vision, with reliable delivery and shipping for every order.
+                </p>
+                
+                <div class="reveal-up flex items-center gap-6" style="transition-delay: 400ms;">
+                    <a href="#collection" class="flex items-center gap-3 text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium hover:text-accent transition-colors group p-2 -m-2">
+                        <div class="w-10 h-10 rounded-full border border-stone flex items-center justify-center group-hover:bg-charcoal group-hover:border-charcoal group-hover:text-white transition-all">
+                            <i data-lucide="arrow-down" class="w-4 h-4 stroke-[1]"></i>
+                        </div>
+                        Explore Designs
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video Hook: This video loads instantly via src, but JS pauses it when out of view -->
+            <div class="relative h-[55vh] md:h-[60vh] lg:h-full order-1 lg:order-2 border-b lg:border-b-0 lg:border-l border-stone bg-stone overflow-hidden">
+                 <video loop muted playsinline webkit-playsinline class="absolute inset-0 w-full h-full object-cover object-center scale-[1.02]">
+                    <source src="videomp_.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                 </video>
+                 <!-- Subtle inner shadow for depth -->
+                 <div class="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.1)] pointer-events-none"></div>
+            </div>
+        </section>
+
+        <!-- Section: Services -->
+        <section class="py-20 md:py-32 border-b border-stone px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto" id="services" aria-label="Our Services">
+            <div class="reveal-up mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight text-charcoal leading-[1.1]">Custom Tailoring <br/><span class="italic text-accent">& Bespoke Suits</span></h2>
+                <p class="text-accent max-w-sm text-xs md:text-sm leading-relaxed font-light">A premium digital storefront for a Kigali tailor moving from social media messages to a structured custom-suit booking experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-stone bg-white/40 backdrop-blur-sm">
+                <!-- Service 1 -->
+                <article class="reveal-up p-8 md:p-12 lg:p-16 border-r border-b border-stone group hover:bg-white transition-colors" style="transition-delay: 100ms;">
+                    <div class="text-[10px] tracking-[0.2em] text-accent mb-8 md:mb-12 uppercase">01</div>
+                    <i data-lucide="scissors" class="w-7 h-7 md:w-8 md:h-8 mb-6 md:mb-8 text-charcoal stroke-[1]"></i>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 md:mb-4">Custom Tailoring</h3>
+                    <p class="text-accent text-xs md:text-sm leading-relaxed font-light">Bespoke custom clothing tailored precisely to your vision, body measurements, preferred style, event, and comfort needs.</p>
+                </article>
+                <!-- Service 2 -->
+                <article class="reveal-up p-8 md:p-12 lg:p-16 border-r border-b border-stone group hover:bg-white transition-colors" style="transition-delay: 200ms;">
+                    <div class="text-[10px] tracking-[0.2em] text-accent mb-8 md:mb-12 uppercase">02</div>
+                    <i data-lucide="shirt" class="w-7 h-7 md:w-8 md:h-8 mb-6 md:mb-8 text-charcoal stroke-[1]"></i>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 md:mb-4">Bespoke Suits</h3>
+                    <p class="text-accent text-xs md:text-sm leading-relaxed font-light">Premium custom suits for formal events, business wear, weddings, special occasions, and standout personal style.</p>
+                </article>
+                <!-- Service 3 -->
+                <article class="reveal-up p-8 md:p-12 lg:p-16 border-r border-b border-stone group hover:bg-white transition-colors" style="transition-delay: 300ms;">
+                    <div class="text-[10px] tracking-[0.2em] text-accent mb-8 md:mb-12 uppercase">03</div>
+                    <i data-lucide="scan-line" class="w-7 h-7 md:w-8 md:h-8 mb-6 md:mb-8 text-charcoal stroke-[1]"></i>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 md:mb-4">Delivery + Shipping</h3>
+                    <p class="text-accent text-xs md:text-sm leading-relaxed font-light">Fast, safe, reliable delivery and shipping, plus referral rewards and a 5% discount when clients purchase two or more items.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Editorial Lookbook Carousel -->
+        <section id="rack-parallax" class="relative w-full py-20 md:py-24 border-b border-stone will-change-transform" aria-label="Suit Lookbook">
+            <div class="flex items-center justify-between mb-8 md:mb-12 px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto">
+                <h3 class="text-lg md:text-xl font-serif italic text-charcoal">Suit Lookbook</h3>
+                <span class="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-accent flex items-center gap-2">Swipe <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+            </div>
+            
+            <!-- Lookbook Container -->
+            <div class="flex justify-start md:justify-center gap-6 md:gap-12 lg:gap-16 px-6 md:px-12 z-10 w-full overflow-x-auto hide-scrollbar pb-8 md:pb-12 snap-x snap-mandatory">
+                
+                <!-- NEW OPTIMIZATION: data-src stops video from loading until scrolled to -->
+                <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer" style="transition-delay: 50ms;">
+                    <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
+                        <video loop muted playsinline webkit-playsinline class="w-full h-full object-cover object-top fashion-img">
+                            <source data-src="mp_.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4 md:mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Custom Suit Presence</h4>
+                            <p class="text-[9px] md:text-[11px] text-accent uppercase tracking-widest mt-1">Tailoring Showcase</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic mt-1">Vol. 1</span>
+                    </div>
+                </article>
+
+                <!-- NEW OPTIMIZATION: data-src stops video from loading until scrolled to -->
+                <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer lg:mt-24" style="transition-delay: 150ms;">
+                    <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
+                        <video loop muted playsinline webkit-playsinline class="w-full h-full object-cover object-top fashion-img">
+                            <source data-src="mip_.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4 md:mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Premium Finish</h4>
+                            <p class="text-[9px] md:text-[11px] text-accent uppercase tracking-widest mt-1">Custom Suit Design</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic mt-1">Vol. 2</span>
+                    </div>
+                </article>
+
+                <!-- Images have standard native lazy load -->
+                <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer" style="transition-delay: 250ms;">
+                    <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
+                        <img src="18.png" alt="White Gold-Button Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                    </div>
+                    <div class="mt-4 md:mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Signature Suit Look</h4>
+                            <p class="text-[9px] md:text-[11px] text-accent uppercase tracking-widest mt-1">Custom Tailoring</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic mt-1">No. 1</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer lg:mt-24" style="transition-delay: 350ms;">
+                    <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
+                        <img src="4.png" alt="Rust Minimalist Tunic" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="mt-4 md:mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Event Suiting</h4>
+                            <p class="text-[9px] md:text-[11px] text-accent uppercase tracking-widest mt-1">Personal Style</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic mt-1">No. 2</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card shrink-0 w-[80vw] sm:w-[60vw] md:w-[35vw] lg:w-[28vw] max-w-[420px] snap-center cursor-pointer" style="transition-delay: 450ms;">
+                    <div class="aspect-[3/4] w-full overflow-hidden bg-stone rounded-sm">
+                        <img src="7.png" alt="Duo Pinstripe Coordination" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                    </div>
+                    <div class="mt-4 md:mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Bespoke Styling</h4>
+                            <p class="text-[9px] md:text-[11px] text-accent uppercase tracking-widest mt-1">Fashion Design</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic mt-1">No. 3</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: The Suit Lookbook / Full Editorial Grid -->
+        <section class="py-24 md:py-32 border-b border-stone px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto" id="collection" aria-label="Tailoring Portfolio">
+            <div class="reveal-up text-center mb-16 md:mb-24">
+                <p class="text-[9px] md:text-[10px] tracking-[0.3em] text-accent uppercase mb-4 md:mb-6">Tailoring Portfolio</p>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight text-charcoal">The Suit Lookbook</h2>
+            </div>
+
+            <!-- Optimized Responsive Masonry Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="1.png" alt="White Jacquard Tuxedo" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Jacquard Elegance</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Formal Suiting</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 01</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="2.png" alt="Black Jacquard Tuxedo" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Classic Noir</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Custom Suits</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 02</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="10.png" alt="Lavender Double Breasted Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Lavender Statement</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Premium Finish</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 03</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-4rem]">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="5.png" alt="Blue Utility Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Utility Tailoring</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Tailored Fit</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 04</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="6.png" alt="Crimson Pinstripe Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Crimson Pinstripe</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Custom Outfit</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 05</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-2rem]">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="17.png" alt="Red & Black Contrast Couple Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Duo Coordination</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Pair Styling</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 06</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-8">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="16.png" alt="Red Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Geometric Bomber</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Fashion Design</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 07</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="8.png" alt="Monochrome Black Suit" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Monochrome Black</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Custom Tailoring</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 08</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="11.png" alt="Youth Black Tunic Formal Wear" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Youth Formal Wear</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Event Wear</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 09</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-2rem]">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="14.png" alt="Tan Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Earth Tone Bomber</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Fashion Design</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 10</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-8">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="15.png" alt="Olive Geometric Bomber Jacket" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Olive Utility Bomber</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Fashion Design</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 11</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-24">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="12.png" alt="Youth Duo Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Youth Duo Styling</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Coordinated Looks</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 12</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-12">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="3.png" alt="Black Tuxedo Bespoke" loading="lazy" decoding="async" class="w-full h-full object-cover object-top fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">Bespoke Custom Suits</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Custom Tailoring</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 13</span>
+                    </div>
+                </article>
+
+                <article class="reveal-up relative fashion-card group cursor-pointer lg:mt-[-1rem]">
+                    <div class="aspect-[4/5] w-full overflow-hidden bg-stone mb-4 md:mb-6 rounded-sm">
+                        <img src="13.png" alt="Tailoring Process Styling" loading="lazy" decoding="async" class="w-full h-full object-cover object-center fashion-img" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-serif text-base md:text-lg">On-Set Coordination</h4>
+                            <p class="text-[9px] md:text-[10px] text-accent uppercase tracking-widest mt-1">Tailoring Process</p>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-accent font-serif italic">Arc. 14</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section: The Corporate Story (Positioning) -->
+        <section class="py-20 md:py-24 px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto" id="craft" aria-label="Business Profile">
+            <div class="reveal-up text-center mb-16 md:mb-24">
+                <p class="text-[9px] md:text-[10px] tracking-[0.3em] text-accent uppercase mb-4 md:mb-6">Tailoring Profile</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight text-charcoal leading-[1.2]">
+                    "From measurements <br class="hidden sm:block"/><span class="italic text-accent">to a suit made for you.</span>"
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+                <div class="lg:col-span-5 reveal-up" style="transition-delay: 200ms;">
+                    <h3 class="text-xl md:text-2xl font-serif mb-4 md:mb-6">The Custom Suit Promise</h3>
+                    <p class="text-accent text-sm md:text-base leading-relaxed font-light mb-6">
+                        Unlike massive international brands, the digital story of MR SEWING FASHION is one of relentless hustle. Officially entering the digital ecosystem on <strong>March 15, 2023</strong> via local registries, the DNA of this company is built purely on an unmatched dedication to bespoke menswear and exceptional physical craftsmanship.
+                    </p>
+                    <div class="pt-6 border-t border-stone">
+                        <div class="flex items-center justify-between text-xs md:text-sm py-3 border-b border-stone">
+                            <span class="text-accent uppercase text-[9px] md:text-[10px] tracking-widest">Location</span>
+                            <span class="font-medium">Kigali, Rwanda</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs md:text-sm py-3 border-b border-stone">
+                            <span class="text-accent uppercase text-[9px] md:text-[10px] tracking-widest">Market Focus</span>
+                            <span class="font-medium">Custom Suits & Bespoke Clothing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 reveal-up" style="transition-delay: 400ms;">
+                    <article class="p-8 md:p-10 border border-stone flex flex-col justify-between aspect-auto sm:aspect-square bg-white rounded-sm shadow-sm">
+                        <i data-lucide="clock" class="w-6 h-6 text-charcoal stroke-[1] mb-8 sm:mb-0"></i>
+                        <div>
+                            <div class="text-5xl md:text-6xl font-serif mb-2">01</div>
+                            <p class="text-[10px] md:text-xs text-accent uppercase tracking-widest leading-relaxed">Business profile includes 1.3K followers, 470 posts, and a clear focus on custom suits and tailoring.</p>
+                        </div>
+                    </article>
+                    <article class="p-8 md:p-10 border border-stone flex flex-col justify-between aspect-auto sm:aspect-square bg-white rounded-sm shadow-sm">
+                        <i data-lucide="star" class="w-6 h-6 text-charcoal fill-charcoal stroke-[1] mb-8 sm:mb-0"></i>
+                        <div>
+                            <div class="text-5xl md:text-6xl font-serif mb-2">24/7</div>
+                            <p class="text-[10px] md:text-xs text-accent uppercase tracking-widest leading-relaxed">Referral rewards and 5% multi-purchase discounts can be presented clearly beside the portfolio and booking flow.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: The Pitch / Market Gap -->
+        <section class="bg-charcoal text-white p-8 sm:p-12 md:p-16 lg:p-24 relative overflow-hidden my-16 md:my-24 border border-charcoal max-w-[1800px] mx-auto md:rounded-sm" id="pitch" aria-label="Digital Proposal">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+                <div class="lg:col-span-5 reveal-right">
+                    <p class="text-stone/60 uppercase tracking-[0.2em] text-[9px] md:text-[10px] mb-4 md:mb-6 border-b border-white/20 pb-3 md:pb-4 inline-block">Digital Tailoring Proposal</p>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif tracking-tight mb-6 md:mb-8 leading-[1.1]">Escaping the <br/><span class="italic text-stone/80">DM-Only Trap.</span></h2>
+                    <p class="text-stone/70 text-sm md:text-base lg:text-lg leading-relaxed font-light mb-8 md:mb-12">
+                        Right now, Mr Sewing Fashion’s work can be discovered through other people’s credits, tags, and video descriptions. A dedicated site gives the brand ownership: one premium portfolio link, one booking funnel, and one clear professional identity.
+                    </p>
+                    <button class="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs tracking-[0.2em] uppercase font-medium border-b border-white pb-2 hover:text-stone/60 hover:border-stone/60 transition-colors p-2 -ml-2">
+                        Start Suit Inquiry <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 stroke-[1.5]"></i>
+                    </button>
+                </div>
+                
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-16">
+                    <article class="reveal-up" style="transition-delay: 100ms;">
+                        <span class="block text-stone/40 font-serif italic text-xl md:text-2xl mb-3 md:mb-4">01.</span>
+                        <h4 class="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4 border-b border-white/20 pb-2 md:pb-3">Brand Ownership</h4>
+                        <p class="text-xs md:text-sm text-stone/60 leading-relaxed font-light">
+                            Instead of being buried in YouTube descriptions or Instagram tags, Mr Sewing Fashion owns a central digital home for the brand.
+                        </p>
+                    </article>
+                    
+                    <article class="reveal-up" style="transition-delay: 200ms;">
+                        <span class="block text-stone/40 font-serif italic text-xl md:text-2xl mb-3 md:mb-4">02.</span>
+                        <h4 class="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4 border-b border-white/20 pb-2 md:pb-3">Suit Lookbook</h4>
+                        <p class="text-xs md:text-sm text-stone/60 leading-relaxed font-light">
+                            A visual portfolio can showcase suits, custom clothing, tailoring details, fittings, and finished looks in a premium editorial flow.
+                        </p>
+                    </article>
+
+                    <article class="reveal-up" style="transition-delay: 300ms;">
+                        <span class="block text-stone/40 font-serif italic text-xl md:text-2xl mb-3 md:mb-4">03.</span>
+                        <h4 class="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4 border-b border-white/20 pb-2 md:pb-3">Tailoring Inquiry Funnel</h4>
+                        <p class="text-xs md:text-sm text-stone/60 leading-relaxed font-light">
+                            Clients can submit measurements, style inspiration, event date, budget, delivery needs, and contact details without scattered DMs.
+                        </p>
+                    </article>
+
+                    <article class="reveal-up" style="transition-delay: 400ms;">
+                        <span class="block text-stone/40 font-serif italic text-xl md:text-2xl mb-3 md:mb-4">04.</span>
+                        <h4 class="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4 border-b border-white/20 pb-2 md:pb-3">Professional Tailor Positioning</h4>
+                        <p class="text-xs md:text-sm text-stone/60 leading-relaxed font-light">
+                            The site frames Mr Sewing Fashion as a premium creative partner, not just a name listed under someone else’s project.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="border-t border-stone bg-background relative z-10 pt-16 md:pt-24 pb-12 px-6 md:px-12 lg:px-16 text-center md:text-left" aria-label="Site Footer">
+        <div class="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16 border-b border-stone pb-12 md:pb-16">
+            <div class="w-full md:w-auto flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-3 mb-3 md:mb-4">
+                    <img src="mr_sewing_logo.png" alt="Mr Sewing Fashion Logo" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply">
+                    <h1 class="text-3xl md:text-4xl font-serif tracking-tight uppercase text-charcoal">MR SEWING</h1>
+                </div>
+                <p class="text-accent text-xs md:text-sm font-light tracking-widest uppercase">Custom Tailoring & Design</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 lg:gap-16 w-full md:w-auto text-center sm:text-left">
+                <div>
+                    <span class="block text-accent text-[9px] md:text-[10px] uppercase tracking-widest mb-3 md:mb-4">Location</span>
+                    <span class="font-serif text-base md:text-lg">Downtown<br/>Kigali, Rwanda</span>
+                </div>
+                <div>
+                    <span class="block text-accent text-[9px] md:text-[10px] uppercase tracking-widest mb-3 md:mb-4">Phone / WhatsApp</span>
+                    <a href="tel:+250787411501" class="font-serif text-base md:text-lg hover:text-accent transition-colors p-2 -m-2">+250 787 411 501</a>
+                </div>
+                <div>
+                    <span class="block text-accent text-[9px] md:text-[10px] uppercase tracking-widest mb-3 md:mb-4">Socials</span>
+                    <a href="https://instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer" class="font-serif text-base md:text-lg hover:text-accent transition-colors flex items-center justify-center sm:justify-start gap-2 p-2 -m-2">
+                        <img src="IN.png" alt="Instagram" loading="lazy" decoding="async" class="w-5 h-5 object-contain"> @mr_sewing_fashion
+                    </a>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <span class="block text-accent text-[9px] md:text-[10px] uppercase tracking-widest mb-3 md:mb-4">Email</span>
+                    <a href="mailto:mrsewingfashiondesigner@gmail.com" class="inline-block text-[10px] md:text-xs tracking-widest uppercase border-b border-charcoal pb-1 hover:text-accent hover:border-accent transition-all p-2 -m-2">
+                        Email Designer
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 md:mt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[9px] md:text-[10px] text-accent uppercase tracking-widest max-w-[1800px] mx-auto">
+            <span>&copy; <span id="year"></span> MR SEWING FASHION.</span>
+            <span>Custom Tailoring Profile.</span>
+        </div>
+    </footer>
+
+    <!-- High Performance Javascript execution -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Icons safely
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const yearEl = document.getElementById('year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => menu.classList.add('hidden'));
+                });
+            }
+
+            // -----------------------------------------------------
+            // NEW OPTIMIZATION: Advanced Video Lazy Loader & Manager
+            // -----------------------------------------------------
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    const source = video.querySelector('source');
+                    
+                    if (entry.isIntersecting) {
+                        // 1. If video has a pending data-src, load it only now
+                        if (source && source.dataset.src && !source.src) {
+                            source.src = source.dataset.src;
+                            video.load();
+                        }
+                        // 2. Play the video when it enters the screen
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(error => {
+                                // Auto-play was prevented by browser policy, ignore quietly
+                            });
+                        }
+                    } else {
+                        // 3. PAUSE the video when it leaves the screen to save battery & CPU!
+                        video.pause();
+                    }
+                });
+            }, { rootMargin: '400px 0px' }); // Trigger slightly before it scrolls into view
+
+            document.querySelectorAll('video').forEach(video => {
+                videoObserver.observe(video);
+            });
+            // -----------------------------------------------------
+
+            // Intersection Observer (Hardware Accelerated Animations)
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+            const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Parallax Effects via requestAnimationFrame for zero-latency 60fps scrolling
+            const topoBg = document.getElementById('topo-bg');
+            const rackParallax = document.getElementById('rack-parallax');
+            let ticking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        // Performance: Only run heavy parallax on desktop devices
+                        if (window.innerWidth > 768) {
+                            if (topoBg) topoBg.style.transform = `translateY(${scrollY * 0.1}px) translateZ(0)`;
+                            if (rackParallax) rackParallax.style.transform = `translateY(-${scrollY * 0.04}px) translateZ(0)`;
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
